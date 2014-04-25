@@ -1,0 +1,146 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\newtheorem{definicion}{Objetivo de la práctica}
+%\newtheorem{ejemplo}{Ejemplo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[PI]{Aproximación del número $\pi$. }
+\author[Anabel]{Anabel Estévez Carrillo}
+\date[25-04-2014]{25 de abril de 2014}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+  
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{frame}
+
+ \hspace*{7.0cm}
+
+ \titlepage
+
+ \begin{small}
+   \begin{center}
+    Facultad de Matemáticas \\
+    Universidad de La Laguna
+   \end{center}
+  \end{small}
+
+\end{frame}
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{frame}
+ \frametitle{Índice}
+ \tableofcontents[pausesections]
+\end{frame}
+
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+\section{Primera Sección}
+
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{frame}
+
+\frametitle{Motivación y objetivos.}
+
+\begin{definicion}
+
+El objetivo de este informe es exponer un programa escrito en el lenguaje de programación Python en el que se aproxime 
+el valor de $\pi$. Además, se tratara de profundizar en los conocimientos adquiridos sobre \LaTeX{}, realizando un informe.
+
+\end{definicion}
+
+\end{frame}
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+\section{Segunda Sección}
+
+
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{frame}
+
+\frametitle{El número pi y su historia}
+
+El número pi, representado por la letra griega $\pi$, equivale a la constante que relaciona el perímetro o longitud de una 
+circunferencia con su diámetro. Es un número irracional y una de las constantes matemáticas más importantes.
+
+Se estima que ya en el año 2.000 a.C. los babilonios tuvieron un acercamiento al averiguar que la circunferencia de un 
+círculo suele ser poco más de tres veces el equivalente a su diámetro. Sin embargo, no fue hasta el año 225 a.C. cuando 
+Arquímedes de Siracusa inició su teoría matemática. La misma se fue perfeccionando a lo largo de los siglos y en 
+1706 el matemático William Jones usó por primera vez su símbolo $\pi$, aunque fue Leonhard Euler el que lo popularizó
+ a partir de 1737. 
+
+\end{frame}
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+\section{Tercera Sección}
+
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{frame}
+
+\frametitle{Aproximaciones de pi}
+
+El valor de $\pi$ se ha obtenido con diversas aproximaciones a lo largo de la historia. La búsqueda del mayor número de 
+decimales del número $\pi$ ha supuesto un esfuerzo constante de numerosos científicos a lo largo de la historia.
+Una forma exacta de poder calcular $\pi$ es la fórmula de Machin, descubierta en 1706. De este modo, 
+$\pi$ se puede calcular mediante integración:
+
+$$\int_{0}^{1} \!\frac{4}{1+x^2}\, dx = 4(atan(1) -atan(0)) = \pi $$
+
+Por ejemplo, si utilizamos la regla del punto medio obtenemos:
+
+\begin{center}
+$ \pi \approx \frac{1}{n} \sum\limits_{i=1}^{n}f(x_i)\,$,
+con $f(x) = \frac{4}{(1+x^2)}\,$,
+$x_i = \frac{i - \frac{1}{2}}{n}$,
+para $i = 1, \dots, n$.
+\end{center}
+
+\end{frame}
+
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+\section{Cuarta Sección}
+
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{frame}
+
+\frametitle{Calculando pi con python}
+
+Vamos a escribir un programa que utilize la regla del punto medio expuesta anteriormente para calcular una aproximación de $\pi$. El recibirá
+como entrada el número de subintervalos con los que se desea abordar la aproximación del número $\pi$.
+
+\begin{block}{Salidas del programa}
+  \begin{itemize}
+  \item
+   Los extremos de los subintervalos.
+  \pause
+
+  \item
+   El punto $x_i$.
+  \pause
+
+  \item
+  El valor de de la función de aproximación de $pi$, $f(x_i)$.
+  \pause
+  
+  \item
+  El resultado de la aproximación.
+  \pause
+  
+  \item
+  La constante pi con 35 decimales.
+
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\end{document}
